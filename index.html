@@ -332,7 +332,18 @@ var ParticlePool = (function() {
         justify-content: center;
         margin-bottom: 5px;
         text-align: center;">YeuAnh</div>
-        <audio autoplay loop src="music.mp3"></audio>
+        <audio id="bgm" loop>
+          <source src="GNDL.mp3" type="audio/mpeg">
+        </audio>
+        
+        <script>
+          document.addEventListener('click', function () {
+            var audio = document.getElementById('bgm');
+            if (audio.paused) {
+              audio.play();
+            }
+          }, { once: true });
+        </script>
           
  </BODY>
 </HTML>
